@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/station_one" android:title="Station One" android:icon="@drawable/ic_tv"/>
+    <item android:id="@+id/station_two" android:title="Station Two" android:icon="@drawable/ic_live_tv"/>
+
+</menu>
