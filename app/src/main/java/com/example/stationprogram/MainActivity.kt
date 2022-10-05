@@ -1,5 +1,6 @@
 package com.example.stationprogram
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.stationprogram.databinding.ActivityMainBinding
@@ -13,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.addProgramButton.setOnClickListener {  }
+        binding.addProgramButton.setOnClickListener { startActivity(Intent(this, AddProgramActivity::class.java)) }
 
         binding.bottomNavigation.setOnItemSelectedListener{
             when(it.itemId){
