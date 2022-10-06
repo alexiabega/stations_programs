@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
@@ -18,7 +20,7 @@
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            app:srcCompat="@drawable/ic_back"/>
+            app:srcCompat="@drawable/ic_back" />
 
         <TextView
             android:id="@+id/title"
@@ -33,16 +35,15 @@
     </LinearLayout>
 
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:layout_marginTop="40dp"
         android:layout_marginHorizontal="30dp"
+        android:gravity="center"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:layout_editor_absoluteX="30dp">
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/name"
@@ -65,7 +66,6 @@
         </com.google.android.material.textfield.TextInputLayout>
 
 
-
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/durstion"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -79,8 +79,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:fontFamily="@font/poppins"
-                android:inputType="number"
                 android:hint="Duration (minutes)"
+                android:inputType="number"
                 android:textColor="@color/black" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -128,13 +128,13 @@
             android:id="@+id/add_program_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginVertical="10dp"
             android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="10dp"
             android:text="Add Program"
             android:textColor="#893f04"
             app:fontFamily="@font/poppins"
             app:layout_constraintBottom_toTopOf="@+id/fragment_container"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toEndOf="parent" />
 
     </LinearLayout>
 
